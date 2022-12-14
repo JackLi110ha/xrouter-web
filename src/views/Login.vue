@@ -5,30 +5,24 @@
         <div class="card p-4">
           <div class="card-body">
             <h1>{{$t('actions.login')}}</h1>
-            <form
-              ref="form"
-              class="form form-inline"
-            >
-              <template v-for="(field, name) in fields">
-                <label
-                  :for="'input_' + name"
-                  class="m-1"
-                  :key="name"
-                  v-if="field.label !== false"
-                >{{field.label}}</label>
-                <b-form-field
-                  class="m-1 mr-4"
-                  :value="model[name]"
-                  @input="setValue(name, arguments[0], arguments[1])"
-                  :field="field"
-                  :key="id + '_' +name"
-                />
-              </template>
+            <b-form @submit="onSubmit" @reset="onReset">
+              <b-form-group
+                id="input-group-1"
+                :label="$t('actions.password')"
+                label-for="input-1"
+              >
+                <b-form-input
+                  id="input-1"
+                  v-model="form.password"
+                  type="password"
+                  required
+                  placeholder="Enter password"
+                ></b-form-input>
+              </b-form-group>
 
-              <slot name="actions">
-                <b-button type="submit" variant="primary" ref="submitButton" @click="submit" class="mr-1">Submit</b-button>
-              </slot>
-            </form>
+              <b-button type="submit" variant="primary">{{$t('actions.submit')}}</b-button>
+              <b-button type="reset" variant="primary">{{$t('actions.logout')}}</b-button>
+            </b-form>
           </div>
         </div>
       </div>
@@ -39,7 +33,6 @@
 </template>
 
 <script>
-// import { types } from "../store";
 import { mapState } from "vuex";
 import LocaleSwitcher from "../components/LocaleSwitcher";
 
@@ -48,46 +41,48 @@ export default {
   components: { LocaleSwitcher },
   computed: {
     ...mapState(["auth", "site"]),
-    fields() {
-      return {
-        username: {
-          label: this.$t("fields.username"),
-          placeholder: this.$t("fields.username"),
-          icon: "icon-user"
-        },
-        password: {
-          label: this.$t("fields.password"),
-          placeholder: this.$t("fields.password"),
-          icon: "icon-lock",
-          type: "password"
-        }
-      };
-    }
   },
   data() {
     return {
-      model: {
-        username: "",
-        password: ""
+      form: {
+        password: '12345678',
       },
-      errors: []
     };
   },
   methods: {
-    setValue(name, value, lang) {
-      this.$set(this.model[name], lang, value);
-    },
-    submit(data) {
-      console.log('data',data);
-      this.$snotify.error('请先登录')
-      // this.$store.commit(types.SET_AUTH, data);
-      // this.$store.dispatch(types.FETCH_SITE);
-      this.$router.push({
-        path: data.redirect || "/"
+    onSubmit(evt) {
+      evt.preventDefault()
+      this.$http['post']('login.cgi', this.form)
+      .then(({ data }) => {
+        console.log('登陆成功',data);
+        if(data.errno==0){
+          this.$snotify.success('登录成功',{position:'centerTop'});
+          this.$router.push({
+          path: "/home"
+        });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    }
+    },
+    onReset(evt) {
+      evt.preventDefault()
+      this.$http['post']('logout.cgi')
+      .then(({ data }) => {
+        console.log('登出',data);
+        if(data.errno==0){
+          this.$snotify.success('登出成功',{position:'centerTop'});
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    },
   },
-  mounted() {}
+  mounted() {
+    //  this.$snotify.success('登出成功',{position:'centerTop'});
+  }
 };
 </script>
 

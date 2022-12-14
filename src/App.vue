@@ -54,7 +54,7 @@ export default {
     ...mapState(["site"])
   },
   created() {
-    this.$store.dispatch(types.FETCH_SITE);
+    // this.$store.dispatch(types.FETCH_SITE);
   }
 };
 </script>

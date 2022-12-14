@@ -9,13 +9,15 @@
     "search_and_export": "搜索并导出",
     "save": "保存",
     "back": "返回",
-    "submit": "提交",
+    "submit": "登录",
+    "logout": "登出",
     "view": "查看",
     "actions": "操作",
     "upload": "上传",
     "change": "更换",
     "choose": "选择",
     "login": "登录",
+    "password":"密码",
     "edit": "编辑"
   },
   "texts": {

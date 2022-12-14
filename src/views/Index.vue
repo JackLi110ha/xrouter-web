@@ -2,8 +2,11 @@
   <div>
     <!-- Go Pro -->
     <div class="btn btn-block btn-dark text-truncate rounded-0 py-2 d-none d-lg-block" style="z-index: 1000;" target="_blank">
-        <locale-switcher class="text-center"></locale-switcher>
+        
     </div>
+    
+		<locale-switcher class="text-center"></locale-switcher>
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
@@ -45,136 +48,97 @@
             </div>
         </div>
     </nav>
-    <footer class="position-relative" id="footer-main">
-        <div class="footer pt-lg-7 footer-dark bg-dark">
-            <!-- SVG shape -->
-            <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
-                <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class=" fill-section-secondary">
-                    <polygon points="2560 0 2560 100 0 100"></polygon>
-                </svg>
-            </div>
-            <!-- Footer -->
-            <div class="container pt-4">
-                <div class="row">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <!-- Theme's logo -->
-                        <a href="index.html">
-                            <!-- <img alt="Image placeholder" src="../../assets/img/brand/light.svg" id="footer-logo"> -->
-                        </a>
-                        <!-- Webpixels' mission -->
-                        <p class="mt-4 text-sm opacity-8 pr-lg-4">Webpixels attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
-                        <!-- Social -->
-                        <ul class="nav mt-4">
-                            <li class="nav-item">
-                                <a class="nav-link pl-0" href="https://dribbble.com/webpixels" target="_blank">
-                                    <i class="fab fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/webpixels" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.instagram.com/webpxs" target="_blank">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
-                        <h6 class="heading mb-3">Account</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Billing</a></li>
-                            <li><a href="#">Notifications</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
-                        <h6 class="heading mb-3">About</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
-                        <h6 class="heading mb-3">Company</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">Help center</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </div>
+
+		<section class="slice slice-lg pt-10 bg-primary">
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <!-- Container -->
+        <div class="container">
+            <div class="row row-grid">
+                <div class="col-lg-8">
+                    <!-- Badge -->
+                    <span class="badge badge-warning badge-pill">Made with Bootstrap</span>
+                    <!-- Title -->
+                    <h2 class="my-4 text-white">Hello Xrouter user</h2>
+                    <!-- Text -->
+                    <p class="lead text-white lh-190">
+                        123
+                    </p>
+                    <p class="lead text-white lh-190">
+                        123
+                    </p>
+                    <p class="lead text-white lh-190">
+                        123
+                    </p>
+                    <p class="lead text-white lh-190">
+                        123
+                    </p>
                 </div>
-                <hr class="divider divider-fade divider-dark my-4">
-                <div class="row align-items-center justify-content-md-between pb-4">
-                    <div class="col-md-6">
-                        <div class="copyright text-sm font-weight-bold text-center text-md-left">
-                            &copy; 2020 <a href="https://webpixels.io" class="font-weight-bold" target="_blank">Webpixels</a>. All rights reserved
+            </div>
+            <!-- Milestones -->
+            <div class="row mt-6">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">1.27%</h3>
+                                    <p class="text-muted mb-0">
+                                        Memory Total
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Terms
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Privacy
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Cookies
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="col-sm-3">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">55k</h3>
+                                    <p class="text-muted mb-0">
+                                        Memory Free
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">98%</h3>
+                                    <p class="text-muted mb-0">
+                                        Up Time
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">98%</h3>
+                                    <p class="text-muted mb-0">
+                                        CPU
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+    
+		<Footer/>
   </div>
 </template>
-<!-- Core JS  -->
-<script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-<!--
 
-<script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/libs/svg-injector/dist/svg-injector.min.js"></script>
-<script src="../../assets/libs/feather-icons/dist/feather.min.js"></script>
--->
-
-<!-- Quick JS -->
-<script src="../../assets/js/quick-website.js"></script>
-<!-- Feather Icons -->
-<script>
-    feather.replace({
-        'width': '1em',
-        'height': '1em'
-    })
-</script>
-<script>
-window.addEventListener("load", function() {
-    setTimeout(function() {
-        document.querySelector('body').classList.add('loaded');
-    }, 300);
-});
-</script>
 <script>
 import LocaleSwitcher from "../components/LocaleSwitcher";
+import Footer from "./Footer";
+console.log('LocaleSwitcher',LocaleSwitcher);
 export default {
-  components: { LocaleSwitcher },
+  components: { LocaleSwitcher,Footer },
   data(){
     return {
       isShow:false

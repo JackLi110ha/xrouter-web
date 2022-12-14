@@ -74,22 +74,22 @@ export default {
     }
   },
   actions: {
-    [types.FETCH_SITE]({ commit, dispatch, state }) {
-      http.get("site").then(({ data }) => {
-        data.fetched = true;
-        commit(types.SET_SITE, data);
-        dispatch(types.FETCH_PAGE_HEADER);
-        if (!state.page_header) {
-          // dispatch(types.FETCH_PAGE_HEADER)
-        }
-        if (state.theme) {
-          commit(types.SET_THEME, state.theme);
-        }
-        if (data.locale) {
-          commit(types.SET_LOCALE, data.locale);
-        }
-      });
-    },
+    // [types.FETCH_SITE]({ commit, dispatch, state }) {
+    //   http.get("site").then(({ data }) => {
+    //     data.fetched = true;
+    //     commit(types.SET_SITE, data);
+    //     dispatch(types.FETCH_PAGE_HEADER);
+    //     if (!state.page_header) {
+    //       // dispatch(types.FETCH_PAGE_HEADER)
+    //     }
+    //     if (state.theme) {
+    //       commit(types.SET_THEME, state.theme);
+    //     }
+    //     if (data.locale) {
+    //       commit(types.SET_LOCALE, data.locale);
+    //     }
+    //   });
+    // },
     [types.FETCH_PAGE_HEADER]({ commit, state, rootState }) {
       // return;
       let url = rootState.route.path;

@@ -2,14 +2,17 @@ import Vue from 'vue'
 import axios from 'axios'
 import store, { types } from './store'
 import _ from 'lodash'
-
-const API_URI = process.env.VUE_APP_API_URL || 'http://47.91.141.191:8000/cgi-bin/'
+import qs from 'qs'
+const API_URI = 'cgi-bin/'
 global.API_URI = API_URI
 axios.defaults.baseURL = API_URI
 global.LOADING_ENABLED = true
+axios.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8";
+
 axios.interceptors.request.use(config => {
   global.LOADING_ENABLED && store.commit(types.START_LOADING)
-  config.headers.Authorization = 'Bearer ' + store.state.auth.token
+  config.headers.Authorization = 'Bearer ' + store.state.auth.token;
+  config.data=qs.stringify(config.data);
   return config
 })
 axios.interceptors.response.use(response => {

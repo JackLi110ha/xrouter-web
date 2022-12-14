@@ -1,6 +1,9 @@
 {
   "actions": {
-    
+    "login": "LOGIN",
+    "submit": "SUBMIT",
+    "logout": "LOGOUT",
+    "password":"password"
   },
   "messages": {
     "paginate": "Total: {total}",
