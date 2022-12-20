@@ -3,6 +3,7 @@ import axios from 'axios'
 import store, { types } from './store'
 import _ from 'lodash'
 import qs from 'qs'
+import Router from "vue-router";
 const API_URI = 'cgi-bin/'
 global.API_URI = API_URI
 axios.defaults.baseURL = API_URI
@@ -22,14 +23,15 @@ axios.interceptors.response.use(response => {
   store.commit(types.SET_PAGE_HEADER, pageHeader)
   return response;
 }, ({response}) => {
+  console.log('response',response);
   store.commit(types.STOP_LOADING)
   const { data, status, statusText } = response
   switch (status) {
     case 422:
 
       break;
-    case 401:
-      // vm.$snotify.error('请先登录')
+    case 511:
+      // vm.$snotify.error('请先登录',{position:'centerTop'})
       store.dispatch(types.GO_LOGIN)
       break
     case 404:

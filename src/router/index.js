@@ -6,6 +6,7 @@ import Login from "../views/Login";
 import Logout from "../views/Logout";
 import Layout from "../views/Index";
 import Home from "../views/Home";
+import Internet from "../views/Internet";
 
 Vue.use(Router);
 
@@ -43,6 +44,11 @@ const router = new Router({
           path: "/home",
           name: "home",
           component: Home
+        },
+        {
+          path: "/internet",
+          name: "internet",
+          component: Internet
         }
         
       ]

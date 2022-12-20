@@ -33,11 +33,8 @@ export default {
     },
     [types.GO_LOGIN](){
       // global.console.log(site.state)
-      if (!site.state.login_url) {
-        return router.push({name: 'login'})
-      } else {
-        return location.href = site.state.login_url
-      }
+      debugger
+      return router.push({name: 'login'})
     }
   }
 }

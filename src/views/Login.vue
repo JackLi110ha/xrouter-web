@@ -11,11 +11,12 @@
                 :label="$t('actions.password')"
                 label-for="input-1"
               >
+              <!-- required -->
                 <b-form-input
                   id="input-1"
                   v-model="form.password"
                   type="password"
-                  required
+                  
                   placeholder="Enter password"
                 ></b-form-input>
               </b-form-group>
@@ -26,8 +27,7 @@
           </div>
         </div>
       </div>
-
-      <locale-switcher class="text-center"></locale-switcher>
+      <LocaleSwitcher class="text-center"></LocaleSwitcher>
     </div>
   </div>
 </template>
@@ -35,7 +35,7 @@
 <script>
 import { mapState } from "vuex";
 import LocaleSwitcher from "../components/LocaleSwitcher";
-
+console.log('LocaleSwitcher',LocaleSwitcher);
 export default {
   name: "Login",
   components: { LocaleSwitcher },
@@ -56,15 +56,14 @@ export default {
       .then(({ data }) => {
         console.log('登陆成功',data);
         if(data.errno==0){
-          this.$snotify.success('登录成功',{position:'centerTop'});
-          this.$router.push({
-          path: "/home"
-        });
+            this.$snotify.success('登录成功',{position:'centerTop'});
+            this.$router.push({
+              path: "/home"
+            });
+        }else {
+          this.$snotify.error(data.reason,{position:'centerTop'});
         }
       })
-      .catch((err) => {
-        console.log(err);
-      });
     },
     onReset(evt) {
       evt.preventDefault()

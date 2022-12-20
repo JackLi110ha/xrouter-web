@@ -16,7 +16,7 @@ export default {
     theme: "cosmo",
     logo: "",
     locale: "en-US",
-    locale_switcher: false,
+    locale_switcher: true,
     theme_switcher: false,
     login_url: null,
     html: "",

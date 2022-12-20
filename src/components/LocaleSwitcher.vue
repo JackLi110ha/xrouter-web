@@ -14,6 +14,7 @@
 import types from "../store/types";
 import { mapState } from "vuex";
 export default {
+  name:"LocaleSwitcher",
   computed: {
     ...mapState(["site"])
   },
@@ -21,6 +22,10 @@ export default {
     ucfirst(val) {
       return String(val)[0].toUpperCase() + String(val).slice(1);
     }
+  },
+  created(){
+    console.log('国际化组件',this.$i18n);
+    console.log('国际化组件',this.site.locale_switcher);
   },
   methods: {
     changeLocale(locale) {
