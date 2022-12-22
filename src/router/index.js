@@ -7,6 +7,7 @@ import Logout from "../views/Logout";
 import Layout from "../views/Index";
 import Home from "../views/Home";
 import Internet from "../views/Internet";
+import Ipv6 from "../views/Ipv6";
 
 Vue.use(Router);
 
@@ -49,6 +50,11 @@ const router = new Router({
           path: "/internet",
           name: "internet",
           component: Internet
+        },
+        {
+          path: "/ipv6",
+          name: "ipv6",
+          component: Ipv6
         }
         
       ]
