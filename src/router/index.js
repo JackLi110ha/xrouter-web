@@ -8,6 +8,8 @@ import Layout from "../views/Index";
 import Home from "../views/Home";
 import Internet from "../views/Internet";
 import Ipv6 from "../views/Ipv6";
+import Wifi from "../views/Wifi";
+import Upgrade from "../views/Upgrade";
 
 Vue.use(Router);
 
@@ -55,6 +57,16 @@ const router = new Router({
           path: "/ipv6",
           name: "ipv6",
           component: Ipv6
+        },
+        {
+          path: "/wifi",
+          name: "wifi",
+          component: Wifi
+        },
+        {
+          path: "/upgrade",
+          name: "upgrade",
+          component: Upgrade
         }
         
       ]

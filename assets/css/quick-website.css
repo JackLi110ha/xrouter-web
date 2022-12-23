@@ -6879,9 +6879,9 @@ a.badge-white.focus
 
 .alert-light
 {
-    color: #273444;
+    /* color: #273444;
     border-color: #eaecf3; 
-    background-color: #eaecf3;
+    background-color: #eaecf3; */
 }
 .alert-light hr
 {

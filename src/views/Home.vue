@@ -72,6 +72,7 @@ export default {
       mtotal: "",
       mfree: "",
       phystatus: "",
+      timer:null,
     };
   },
   methods: {
@@ -151,16 +152,19 @@ export default {
     },
   },
   created() {
-    // setInterval(()=>{
-    // 	this.load_memory_info();
-    // 	this.load_uptime();
-    // 	this.load_cpu_stat();
-    // 	this.load_phy_status();
-    // }, 2000);
-    this.load_memory_info();
-    this.load_uptime();
-    this.load_cpu_stat();
-    this.load_phy_status();
+    this.timer=setInterval(()=>{
+    	this.load_memory_info();
+    	this.load_uptime();
+    	this.load_cpu_stat();
+    	this.load_phy_status();
+    }, 2000);
+    // this.load_memory_info();
+    // this.load_uptime();
+    // this.load_cpu_stat();
+    // this.load_phy_status();
+  },
+  destroyed(){
+    clearInterval(this.timer);
   }
 };
 </script>

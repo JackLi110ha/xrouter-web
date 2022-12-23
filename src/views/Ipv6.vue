@@ -511,6 +511,8 @@ export default {
         if(data.errno){
           this.$snotify.success("Commit ipv6 settings failed:\nerrno: " + result.errno +
 						"\nerrstr: " + result.errstr + "\nreason: " + result.reason,{position:'centerTop'});
+        }else {
+          this.$snotify.success(data.status + ": " + data.statusText,{position:'centerTop'});
         }
       }).catch(result=>{
         this.$snotify.error(result.status + ": " + result.statusText,{position:'centerTop'});

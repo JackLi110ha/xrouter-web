@@ -59,9 +59,9 @@
               <div class="dropdown-menu dropdown-menu-single">
                 <router-link class="nav-link" to="/internet">Internet</router-link>
                 <router-link class="nav-link" to="/ipv6">IPv6</router-link>
-                <router-link class="nav-link" to="/home">WiFi</router-link>
+                <router-link class="nav-link" to="/wifi">WiFi</router-link>
                 <router-link class="nav-link" to="/home">Firewall</router-link>
-                <router-link class="nav-link" to="/home">Upgrade</router-link>
+                <router-link class="nav-link" to="/upgrade">Upgrade</router-link>
               </div>
             </li>
             <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
